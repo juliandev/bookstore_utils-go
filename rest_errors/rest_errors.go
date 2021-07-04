@@ -34,11 +34,11 @@ func NewNotFoundError(message string) *RestErr {
 }
 
 func NewUnauthorizedError(message string) *RestErr {
-	return &RestErr {
-		Message: message,
-		Status: http.StatusUnauthorized,
-		Error: "unauthorized",
-	}
+        return &RestErr {
+                Message: message,
+                Status: http.StatusUnauthorized,
+                Error: "unauthorized",
+        }
 }
 
 func NewConflictError(message string) *RestErr {
