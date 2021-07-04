@@ -33,6 +33,14 @@ func NewNotFoundError(message string ) *RestErr {
         }
 }
 
+func NewUnauthorizedError(message string) *RestErr {
+	return &RestErr {
+		Message: message,
+		Status: http.StatusUnauthorized,
+		Error: "not_found"
+	}
+}
+
 func NewConflictError(message string ) *RestErr {
 	return &RestErr {
 		Message: message,
