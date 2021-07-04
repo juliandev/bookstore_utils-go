@@ -17,7 +17,7 @@ func NewError(msg string) error {
 	return errors.New(msg)
 }
 
-func NewBadRequestError(message string ) *RestErr {
+func NewBadRequestError(message string) *RestErr {
 	return &RestErr {
 		Message: message,
 		Status: http.StatusBadRequest,
@@ -25,7 +25,7 @@ func NewBadRequestError(message string ) *RestErr {
 	}
 }
 
-func NewNotFoundError(message string ) *RestErr {
+func NewNotFoundError(message string) *RestErr {
         return &RestErr {
                 Message: message,
                 Status: http.StatusNotFound,
@@ -37,11 +37,11 @@ func NewUnauthorizedError(message string) *RestErr {
 	return &RestErr {
 		Message: message,
 		Status: http.StatusUnauthorized,
-		Error: "not_found",
+		Error: "unauthorized",
 	}
 }
 
-func NewConflictError(message string ) *RestErr {
+func NewConflictError(message string) *RestErr {
 	return &RestErr {
 		Message: message,
 		Status: http.StatusConflict,
