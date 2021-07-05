@@ -95,3 +95,4 @@ func Error(msg string, err error, tags ...zap.Field) {
 	log.log.Error(msg, tags...)
 	log.log.Sync()
 }
+
