@@ -17,7 +17,7 @@ type RestErr interface {
 
 type restErr struct {
 	ErrMessage string        `json:"message"`
-	ErrStatus  int           `json:"code"`
+	ErrStatus  int           `json:"status"`
 	ErrError   string        `json:"error"`
 	ErrCauses  []interface{} `json:"causes"`
 }
