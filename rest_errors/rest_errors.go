@@ -17,7 +17,7 @@ type RestErr interface {
 
 type restErr struct {
 	ErrMessage string        `json:"message"`
-	ErrStatus  int           `json:"code"`
+	ErrStatus  int           `json:"status"`
 	ErrError   string        `json:"error"`
 	ErrCauses  []interface{} `json:"causes"`
 }
@@ -31,7 +31,7 @@ func (e restErr) Status() int {
 }
 
 func (e restErr) Error() string {
-	return fmt.Sprintf("message: %s - status_code: %d - error: %s - causes: [ %y ]",
+	return fmt.Sprintf("message: %s - status: %d - error: %s - causes: [ %y ]",
                 e.ErrMessage, e.ErrStatus, e.ErrError, e.ErrCauses)
 }
 
